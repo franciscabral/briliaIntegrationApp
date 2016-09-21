@@ -54,6 +54,6 @@ router.route('/integrations/delete')
 
 app.use('/api', router);
 
-app.listen(3000, function () {
-    console.log('ouvindo na porta 3000');
+app.listen(process.env.PORT || 3000, function () {
+    console.log('ouvindo na porta ' + (process.env.PORT || 3000));
 });
