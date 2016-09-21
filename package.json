@@ -4,7 +4,8 @@
   "description": "Async Workaround",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "francis",
   "license": "ISC",
@@ -12,5 +13,14 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mongoose": "^4.6.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franciscabral/briliaIntegrationApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/franciscabral/briliaIntegrationApp/issues"
+  },
+  "homepage": "https://github.com/franciscabral/briliaIntegrationApp#readme"
 }

@@ -6,7 +6,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Integration = require('./app/models/integration');
 const app = express();
-mongoose.connect('mongodb://integrationdb:snlZ7mRRGBYge2E2YwfNzAOyJpbZqeJoVExgAaGEjZULHEBEJGCnRp5OGyEeXoZzsrwEDO3dEjJPYraUHixLtQ==@integrationdb.documents.azure.com:10250/?ssl=true');
+var port = process.env.PORT || 3000;
+var mongoDBConnection = process.env['MONGODB'];
+mongoose.connect(mongoDBConnection);
 
 var router = express.Router();
 
@@ -54,6 +56,6 @@ router.route('/integrations/delete')
 
 app.use('/api', router);
 
-app.listen(process.env.PORT || 3000, function () {
-    console.log('ouvindo na porta ' + (process.env.PORT || 3000));
+app.listen(port, function () {
+    console.log('ouvindo na porta ' + port);
 });
