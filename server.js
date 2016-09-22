@@ -64,6 +64,16 @@ router.route('/integrations/delete')
         }
     );
 
+
+router.route('/logs/delete')
+    .get(function (req, res) {
+        Log.remove({}, function (err) {
+            if (err)
+                res.send(err);
+            res.json({message: 'Successfully deleted'});
+        })
+    });
+
 app.use('/api', router);
 
 app.listen(port, function () {
